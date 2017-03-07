@@ -3,6 +3,8 @@ boshiamy-emoji
 ==============
 An emoji input plugin for pi314/boshiamy.vim
 
+This plugin is a embedded plugin, within the Boshiamy Chinese input mode.
+
 Installation
 -------------
 After installation, please add ``'emoji'`` to ``g:boshiamy_plugins`` ::
