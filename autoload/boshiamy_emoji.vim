@@ -20,11 +20,12 @@ function! s:Handler (matchobj)
         " Only a comma?
         return s:prefixes
 
-    elseif l:emoji_str[0] == ':' && l:emoji_str[-1] ==# ':'
+    elseif l:emoji_str[0] ==# ':' && l:emoji_str[-1:] ==# ':'
         " A completed emoji alpha code
         if has_key(s:table, l:emoji_str)
             return [s:table[(l:emoji_str)]]
         endif
+
     else
         " An incomplete emoju alpha code
         let l:candidates = []
@@ -37,6 +38,7 @@ function! s:Handler (matchobj)
             call sort(l:candidates)
             return l:candidates
         endif
+
     endif
 
     return []
