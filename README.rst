@@ -1,7 +1,7 @@
 ==============
 boshiamy-emoji
 ==============
-An emoji input plugin for pi314/boshiamy.vim
+An emoji input plugin for `pi314/boshiamy.vim <https://github.com/pi314/boshiamy.vim>`_
 
 This plugin is a embedded plugin, within the Boshiamy Chinese input mode.
 
