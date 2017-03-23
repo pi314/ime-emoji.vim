@@ -2,9 +2,9 @@ let s:table = {}
 let s:prefixes = []
 
 
-function! s:Handler (matchobj)
+function! ime_emoji#handler (matchobj, trigger)
     if s:table == {}
-        let s:table = boshiamy_emoji_autoload#table()
+        let s:table = ime_emoji_table#table()
         let l:tmp_dict = {}
         for l:alpha_code in keys(s:table)
             let l:tmp_dict[(l:alpha_code[:1])] = ''
@@ -45,10 +45,11 @@ function! s:Handler (matchobj)
 endfunction
 
 
-function! boshiamy_emoji#info ()
+function! ime_emoji#info ()
     return {
     \ 'type': 'embedded',
     \ 'pattern': '\v:([0-9a-z_+-]+:?)?$',
-    \ 'handler': function('s:Handler'),
+    \ 'handler': function('ime_emoji#handler'),
+    \ 'trigger': ['<space>'],
     \ }
 endfunction

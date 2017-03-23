@@ -2377,6 +2377,6 @@ let s:table[':zzz:'] = '💤'
 echom "Done"
 
 
-function! boshiamy_emoji_autoload#table ()
+function! ime_emoji_table#table ()
     return s:table
 endfunction
