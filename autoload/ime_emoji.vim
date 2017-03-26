@@ -50,6 +50,6 @@ function! ime_emoji#info ()
     \ 'type': 'embedded',
     \ 'pattern': '\v:([0-9a-z_+-]+:?)?$',
     \ 'handler': function('ime_emoji#handler'),
-    \ 'trigger': ['<space>'],
+    \ 'trigger': [' '],
     \ }
 endfunction
